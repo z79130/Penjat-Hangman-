@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>jocdelpenjat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script>
+        // Variables Globals
+        var Vides = 7;
+        //var Lletres = "";
+        //var Paraula = "";
+        
+        // var lletra = document.getElementById("lletra").value;
+        
+        
+        
+        
+        
+        
+        
+                
+        function myFunction(){
+            lletra=lletra.toLowerCase();
+            lletra = document.getElementById("lletra").value;
+            if((lletra >= "a") && (lletra <= "m")) {
+            window.alert("Has encertat");
+            //Lletra = Lletres + lletra + " ";
+        }else{
+            window.alert("Has fallat");
+            Vides = Vides-1;
+            }
+            document.getElementById("Vides").innerHTML =
+                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
+        
+            if(Vides === 0){
+                window.alert("Has perdut");
+                document.getElementById("Comprovar").disabled = true;
+                //document.getElementById("lletra").disabled = true;
+            }
+        }
+        
+        
+        
+    </script>
+    </head>
+    <body>
+        <h1>Prototip Joc del Penjat</h1>
+        <input type="text" id="lletra" name="esbrina la lletra" maxlength="1"
+               placeholder="Escriu una lletra">
+        <button type="button" onclick="myFunction();">Comprovar</button>
+        
+        <h2>Paraula</h2>
+        <p>_ _ _ _ _</p>
+        
+        <h2>Vides</h2>
+        <p id="Vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
+        
+        <h2>Lletres</h2>
+        <p>_ _ _ _ _ </p>
+        
+        <h4>
+           Crèdits: <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El Joc del Penjat on Scratch</a>
+        </h4>
+    </body>
+</html>
