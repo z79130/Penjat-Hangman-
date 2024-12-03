@@ -16,46 +16,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         //var Paraula = "";
         
         // var lletra = document.getElementById("lletra").value;
-        
-        
-        
-        
-        
-        
-        
-                
-        function myFunction(){
-            lletra=lletra.toLowerCase();
+                  
+        function comprovar(){
             lletra = document.getElementById("lletra").value;
+            lletra=lletra.toLowerCase();
             if((lletra >= "a") && (lletra <= "m")) {
-            window.alert("Has encertat");
-            //Lletra = Lletres + lletra + " ";
-        }else{
-            window.alert("Has fallat");
-            Vides = Vides-1;
+                window.alert("Has encertat");
+                Paraula = Paraula + lletra + " ";
+                document.getElementById("Paraula").innerHTML = Paraula;
+            } else {
+                window.alert("Has fallat");
+                Vides = Vides-1;
+            }
+            if (Vides <= 0) {
+                window.alert("Has perdut");
+                aturaTot();
             }
             document.getElementById("Vides").innerHTML =
-                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
-        
-            if(Vides === 0){
-                window.alert("Has perdut");
-                document.getElementById("Comprovar").disabled = true;
-                //document.getElementById("lletra").disabled = true;
-            }
+                    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
         }
         
+        function aturaTot() {
+            document.getElementById("Comprovar").disabled = true;
+            document.getElementById("lletra").disabled = true;
+        }
         
-        
+                
     </script>
     </head>
     <body>
         <h1>Prototip Joc del Penjat</h1>
         <input type="text" id="lletra" name="esbrina la lletra" maxlength="1"
                placeholder="Escriu una lletra">
-        <button type="button" onclick="myFunction();">Comprovar</button>
+        <button id="Comprovar" type="button" onclick="comprovar();">Comprovar</button>
         
         <h2>Paraula</h2>
-        <p>_ _ _ _ _</p>
+        <p id="Paraula">_ _ _ _ _</p>
         
         <h2>Vides</h2>
         <p id="Vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
