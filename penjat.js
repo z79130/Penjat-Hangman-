@@ -8,22 +8,48 @@
         var Vides = 7;
         var errada = "";
         var Paraula = "";
-        
-        // var lletra = document.getElementById("lletra").value;
                   
         function comprovar(){
             lletra = document.getElementById("lletra").value;
+            //convertim tot a minúscules
             lletra=lletra.toLowerCase();
-            if((lletra >= "a") && (lletra <= "m")) {
+            //Eliminam caràcters especials com accents i dièresis
+            switch(lletra) {
+                case "à":
+                case "á":
+                        lletra = "a";
+                        break;
+                        case "è":
+                        case "é":
+                        lletra = "e";
+                        break;
+                        case "í":
+                        case "ï":
+                        lletra = "i";
+                        break;
+                        case "ò":
+                        case "ó":
+                        lletra = "o";
+                        break;
+                        case "ü":
+                        case "ú":
+                        lletra = "u";
+                        break; 
+            }
+            if((lletra >= "a") && (lletra <= "m") || (lletra === "ç")) {
                 window.alert("Has encertat");
                 Paraula = Paraula + lletra + " ";
                 document.getElementById("Paraula").innerHTML = Paraula;
-            } else {
+            } else if((lletra >= "n") && (lletra <= "z") || (lletra === "ñ")) {{
                 window.alert("Has fallat");
                 Vides = Vides-1;
                 errada = errada + lletra + " ";
                 document.getElementById("errada").innerHTML = errada;
             }
+            }else{
+                window.alert("caràcter no vàlid, torna a provar");
+            }
+            
             if (Vides <= 0) {
                 window.alert("Has perdut");
                 aturaTot();
@@ -31,6 +57,8 @@
             if (Paraula.length >= 14) {
                 window.alert("Has guanyat!");
                 aturaTot();
+                document.getElementById("imgindex").hidden = false;
+                window.alert("Les cacatues són increïbles");
             }
             document.getElementById("Vides").innerHTML =
                     "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
@@ -40,6 +68,9 @@
         function aturaTot() {
             document.getElementById("Comprovar").disabled = true;
             document.getElementById("lletra").disabled = true;
+        }
+        function cargar() {
+            document.getElementById("imgindex").hidden = true;
         }
         
         
