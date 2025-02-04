@@ -72,6 +72,7 @@
             //Si les vides arriben a 0, has perdut
             if (Vides <= 0) {
                 window.alert("Has perdut");
+                document.getElementById("rotar").hidden = false;
                 aturaTot();
             }
             //si has aconseguit introduir 7 lletres has guanyat
@@ -80,9 +81,9 @@
             if (Paraula.length >= 14) {
                 window.alert("Has guanyat!");
                 aturaTot();
-                document.getElementById("imgindex").hidden = false;
                 document.getElementById("ahorcado").hidden = false;
                 document.getElementById("cheer").play();
+                document.getElementById("caminar").hidden = false;
                 window.alert("Les cacatues són increïbles");
                 
             }
@@ -98,7 +99,6 @@
         }        
         //Amaga les imatges
         function cargar() {
-            document.getElementById("imgindex").hidden = true;
             document.getElementById("ahorcado_0").hidden = true;
             document.getElementById("ahorcado_1").hidden = true;
             document.getElementById("ahorcado_2").hidden = true;
@@ -107,6 +107,9 @@
             document.getElementById("ahorcado_5").hidden = true;
             document.getElementById("ahorcado_6").hidden = true;
             document.getElementById("ahorcado").hidden = true;
+            document.getElementById("caminar").hidden = true;
+            document.getElementById("rotar").hidden = true;
+            
             if (!confirm('Anam a la quinta forca?'))
                 document.body.style.backgroundImage = "url('img/fondo1.png')";
             document.getElementById("mystery").play();
