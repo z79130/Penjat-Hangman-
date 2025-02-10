@@ -63,6 +63,7 @@
                 document.getElementById("errada").innerHTML = errada;
                 document.getElementById("boom").play();
                 document.getElementById("clock").play();
+                document.getElementById("moix").hidden = false;
                 mostraImatges();
             }
             //Diu si el caràcter introduit és valid o no 
@@ -72,6 +73,10 @@
             //Si les vides arriben a 0, has perdut
             if (Vides <= 0) {
                 window.alert("Has perdut");
+                document.getElementById("moix").hidden = true;
+                document.body.style.backgroundImage = "url('img/Jungle.png')";
+                document.getElementById("cat").play();
+                document.getElementById("bell").play();
                 document.getElementById("rotar").hidden = false;
                 aturaTot();
             }
@@ -81,8 +86,11 @@
             if (Paraula.length >= 14) {
                 window.alert("Has guanyat!");
                 aturaTot();
+                amagaImatges();
                 document.getElementById("ahorcado").hidden = false;
                 document.getElementById("cheer").play();
+                document.body.style.backgroundImage = "url('img/Party.png')";
+                document.getElementById("moix").hidden = true;
                 document.getElementById("caminar").hidden = false;
                 window.alert("Les cacatues són increïbles");
                 
@@ -109,6 +117,7 @@
             document.getElementById("ahorcado").hidden = true;
             document.getElementById("caminar").hidden = true;
             document.getElementById("rotar").hidden = true;
+            document.getElementById("moix").hidden = true;
             
             if (!confirm('Anam a la quinta forca?'))
                 document.body.style.backgroundImage = "url('img/fondo1.png')";
@@ -145,6 +154,16 @@
                     document.getElementById("ahorcado_1").hidden = true;
                     break;        
             }
+        }
+        
+        function amagaImatges(){
+            document.getElementById("ahorcado_0").hidden = true;
+            document.getElementById("ahorcado_1").hidden = true;
+            document.getElementById("ahorcado_2").hidden = true;
+            document.getElementById("ahorcado_3").hidden = true;
+            document.getElementById("ahorcado_4").hidden = true;
+            document.getElementById("ahorcado_5").hidden = true;
+            document.getElementById("ahorcado_6").hidden = true;
         }
 
         
