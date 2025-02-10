@@ -78,6 +78,7 @@
                 document.getElementById("cat").play();
                 document.getElementById("bell").play();
                 document.getElementById("rotar").hidden = false;
+                window.alert("que en pau descansi R.I.P.");
                 aturaTot();
             }
             //si has aconseguit introduir 7 lletres has guanyat
