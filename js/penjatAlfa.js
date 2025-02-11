@@ -119,12 +119,13 @@
             document.getElementById("caminar").hidden = true;
             document.getElementById("rotar").hidden = true;
             document.getElementById("moix").hidden = true;
-            
+            //Demana a l'usuari a quina pantalla vol jugar
             if (!confirm('Anam a la quinta forca?'))
                 document.body.style.backgroundImage = "url('img/fondo1.png')";
             document.getElementById("mystery").play();
         }
         
+        //Mostra les imatges corresponents respecte a les vides
         function mostraImatges(){
             switch (Vides){
                 case 6:
@@ -157,6 +158,7 @@
             }
         }
         
+        //Amaga totes les imatges del penjat
         function amagaImatges(){
             document.getElementById("ahorcado_0").hidden = true;
             document.getElementById("ahorcado_1").hidden = true;
