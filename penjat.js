@@ -42,6 +42,7 @@
                 window.alert("Has encertat");
                 Paraula = Paraula + lletra + " ";
                 document.getElementById("Paraula").innerHTML = Paraula;
+                
             //Les lletres o caràcters que no són correctes
             //Si has fallat perds una vida
             } else if((lletra >= "n") && (lletra <= "z") || (lletra === "ñ") || (lletra === "-")){{
@@ -80,9 +81,4 @@
         //Amaga una imatge
         function cargar() {
             document.getElementById("imgindex").hidden = true;
-        }
-
-        
-        
-        
-                
+        }  
