@@ -67,8 +67,10 @@
                         lletra = "u";
                         break; 
             }
+            
             //Comprova si les lletres són correctes o no
             //Afegeix la lletra a la paraula si has encertat
+            if((lletra >= "a") && (lletra <= "z") || (lletra === "ç") || (lletra === "ñ")) {
             if(paraula.includes(lletra)){
                 window.alert("Has encertat");
                 pos = paraula.indexOf(lletra);
@@ -84,9 +86,8 @@
                 
             //Les lletres o caràcters que no són correctes
             //Si has fallat perds una vida
-            } else if(!paraula.includes(lletra)){{
-                    
-                if (Lletres.indexOf(lletra) !==-1){
+            }else{                    
+                if (Lletres.indexOf(lletra) !== -1){
                     window.alert("lletra repetida");
                 }else{
                     window.alert("Has fallat");
@@ -101,14 +102,11 @@
                     document.getElementById("moix").hidden = false;
                     mostraImatges();
                 }
-                
-            }
+                }
             //Diu si el caràcter introduit és valid o no 
             }else{
                 window.alert("caràcter no vàlid, torna a provar");
-            }
-            
-            
+            }                       
             
             //Si les vides arriben a 0, has perdut
             if (Vides <= 0) {
@@ -116,9 +114,9 @@
                 document.getElementById("moix").hidden = true;
                 document.body.style.backgroundImage = "url('img/Jungle.png')";
                 document.getElementById("cat").play();
-                document.getElementById("bell").play();
                 document.getElementById("rotar").hidden = false;
                 window.alert("que en pau descansi R.I.P.");
+                document.getElementById("bell").play();
                 aturaTot();
             }
             //si has aconseguit introduir totes les lletres has guanyat
@@ -126,15 +124,14 @@
             // pos = paraula.indexOf("_");
             if (Paraula.indexOf("_") === -1 ){
                 window.alert("Has guanyat!");
-                aturaTot();
-                amagaImatges();
+                document.body.style.backgroundImage = "url('img/Party.png')";
                 document.getElementById("ahorcado").hidden = false;
                 document.getElementById("cheer").play();
-                document.body.style.backgroundImage = "url('img/Party.png')";
                 document.getElementById("moix").hidden = true;
                 document.getElementById("caminar").hidden = false;
-                window.alert("Les cacatues són increïbles");
-                
+                window.alert("Les cacatues són increïbles");   
+                aturaTot();
+                amagaImatges();
             }
             //espai per a les vides
             document.getElementById("Vides").innerHTML =
@@ -160,7 +157,7 @@
             document.getElementById("rotar").hidden = true;
             document.getElementById("moix").hidden = true;
             //Demana a l'usuari a quina pantalla vol jugar
-            if (!confirm('Anam a la quinta forca?'))
+            if (!confirm('Anam a la quinta forca?/Vamos a la quinta forca?/Wanna go to the fifth gallow?'))
                 document.body.style.backgroundImage = "url('img/fondo1.png')";
             document.getElementById("mystery").play();
         }
