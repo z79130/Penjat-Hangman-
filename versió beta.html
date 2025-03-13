@@ -13,28 +13,53 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </head>
     <body onload = "cargar();" style =" background-image: url('img/Desert.png');
           background-size: 640px 480px; background-repeat: no-repeat;">
-        <h1 translate="no">Joc del Penjat versió alfa</h1>
+        <h1 translate="no">Joc del Penjat versió beta</h1>
         <input type="text" id="lletra" name="esbrina la lletra" maxlength="1"
                placeholder="Escriu una lletra">
         <button id="Comprovar" type="button" onclick="comprovar()">Comprovar</button>
         
-        <h2>Paraula<button id="pistes" type="button" onclick="ajuda()">pistes</button></h2>
+        <h2>Paraula<a href="https://prosselloe.wordpress.com/2015/05/16/vols-sopes-en-record-dels-nostres-padrins/">Demanes sopes?</a>&nbsp;&nbsp;<button id="pistes" type="button" onclick="ajuda()">pistes</button></h2>
         <p id="Paraula">_ _ _ _ _</p>
         
-        <h2>Vides</h2>
+        <h2>Vides<a href="https://pccd.dites.cat/p/Tenir_set_vides%2C_com_els_gats" >un moix en té set?</a></h2>
         <p id="Vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
         
-        <h2>Lletres fallades</h2>
+        <h2>Lletres fallades<a href="https://pccd.dites.cat/p/De_lletres">ets de lletres?</a></h2>
         <p id="errada">_ _ _ _ _ </p>
+        <div id="link">    
+        <h4>
+           Crèdits: <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El Joc del Penjat on Scratch</a>
+           URL pistes: <a href="https://pccd.dites.cat/p/A_la_quinta_forca">dita 1</a><a href="https://pccd.dites.cat/p/A_ca_un_penjat%2C_no_hi_anomenis_cordes">dita 2</a><a href="https://pccd.dites.cat/p/Setze_jutges_d%27un_jutjat_mengen_fetge_d%27un_penjat">dita 3</a>
+        </h4>
+        </div>
+        
+        <div id="link2">
+        <h4>
+            Youtube: <a href="https://www.youtube.com/watch?v=v53rEMHghJU&list=PLv1JHCp6B60w_KnMTu7jDdlDZ6Z0-WJ-j&ab_channel=PereMiquelRossell%C3%B3Espases">El Joc del Penjat on Scratch</a>
+            Wikis: <a href="https://ca.wikipedia.org/wiki/Penjat">Penjat</a><a href="https://es.wikipedia.org/wiki/Ahorcado_(juego)">Ahorcado</a><a href="https://en.wikipedia.org/wiki/Hangman_(game)">Hangman</a>
+        </h4>
+        </div>
+        
         <h4 id = "counter" >0</h4>
         
         <div id="banderes">
-            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img id="es" src="img/es.png" alt="españish"/></a>
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img id="es" src="img/es.png" alt=""/></a>
             <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp"><img id="fr" src="img/fr.png" alt=""/></a>
             <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=gb&_x_tr_hl=gb&_x_tr_pto=wapp"><img id="gb" src="img/gb.png" alt=""/></a>
             <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=wapp"><img id="it" src="img/it.png" alt=""/></a>
             <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=ca&_x_tr_hl=ca&_x_tr_pto=wapp"><img id="ca" src="img/ca.png" alt=""/></a>
             <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp"><img id="de" src="img/de.png" alt=""/></a>
+            <button id="TECLAT" type="button" onclick="document.getElementById('Teclat').hidden =
+                    !document.getElementById('Teclat').hidden;" title="Mostra o Amaga"> 
+            <img src="img/keyboard.png" alt="teclat"> </button>
+            <button id="sons" title="On / Off" 
+           onclick="document.getElementById('off').hidden =
+                    document.getElementById('on').hidden;
+                    document.getElementById('on').hidden =
+                    document.getElementById('off').hidden;">
+            <img src="img/volumeOn.jpg" id="on" style="width:20px">
+            <img src="img/mute.jpg" id="off" style="width:20px" hidden>
+            </button>
         </div>
        
         <br><br>
@@ -93,9 +118,75 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
             
             
             
-            
-        <h4>
-           Crèdits: <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El Joc del Penjat on Scratch</a>
-        </h4>
+         <div id="Teclat" translate="no">
+            <table><strong>
+                <tr>
+                  <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="q" onclick="document.getElementById('lletra').value = 'q';">q</button>
+                    <button id="w" onclick="document.getElementById('lletra').value = 'w';">w</button>
+                    <button id="e" onclick="document.getElementById('lletra').value = 'e';">e</button>
+                    <button id="r" onclick="document.getElementById('lletra').value = 'r';">r</button>
+                    <button id="t" onclick="document.getElementById('lletra').value = 't';">t</button>
+                    <button id="y" onclick="document.getElementById('lletra').value = 'y';">y</button>
+                    <button id="u" onclick="document.getElementById('lletra').value = 'u';">u</button>
+                    <button id="i" onclick="document.getElementById('lletra').value = 'i';">i</button>
+                    <button id="o" onclick="document.getElementById('lletra').value = 'o';">o</button>
+                    <button id="p" onclick="document.getElementById('lletra').value = 'p';">p</button>
+                    <!--
+                    <button id="agut" onclick="alert('Sense vocals accentuades!');" 
+                            style="color:red" title="Accent Agut">´</button>
+                    -->
+                    <button id="retro" onclick="Retroces();;" title="BACKSPACE">←</button>
+                  </td>          
+                </tr>
+                <tr>
+                  <td>
+                    &nbsp;&nbsp;
+                    <button id="a" onclick="document.getElementById('lletra').value = 'a';">a</button>
+                    <button id="s" onclick="document.getElementById('lletra').value = 's';">s</button>
+                    <button id="d" onclick="document.getElementById('lletra').value = 'd';">d</button>
+                    <button id="f" onclick="document.getElementById('lletra').value = 'f';">f</button>
+                    <button id="g" onclick="document.getElementById('lletra').value = 'g';">g</button>
+                    <button id="h" onclick="document.getElementById('lletra').value = 'h';">h</button>
+                    <button id="j" onclick="document.getElementById('lletra').value = 'j';">j</button>
+                    <button id="k" onclick="document.getElementById('lletra').value = 'k';">k</button>
+                    <button id="l" onclick="document.getElementById('lletra').value = 'l';">l</button>
+                    <button id="ñ" onclick="document.getElementById('lletra').value = 'ñ';" 
+                            style="color:blue">ñ</button>
+                    <!--
+                    <button id="dieresi" onclick="alert('Sense vocals amb dièrsi!');" 
+                            style="color:red" title="Dièresi">¨</button>
+                    -->
+                    <button id="intro" onclick="Comprovar();" title="ENTER">┘</button>
+                  </td>          
+                </tr>
+                <tr>
+                  <td>
+                    <button id="shift" onclick="alert('Només lletres minúscules!');" 
+                            style="color:red" title="SHIFT">↑</button>
+                    <button id="z" onclick="document.getElementById('lletra').value = 'z';">z</button>
+                    <button id="x" onclick="document.getElementById('lletra').value = 'x';">x</button>
+                    <button id="c" onclick="document.getElementById('lletra').value = 'c';">c</button>
+                    <button id="v" onclick="document.getElementById('lletra').value = 'v';">v</button>
+                    <button id="b" onclick="document.getElementById('lletra').value = 'b';">b</button>
+                    <button id="n" onclick="document.getElementById('lletra').value = 'n';">n</button>
+                    <button id="m" onclick="document.getElementById('lletra').value = 'm';">m</button>
+                    <button id="ç" onclick="document.getElementById('lletra').value = 'ç';" 
+                            style="color:blue">ç</button>
+                    <button id="volat" onclick="document.getElementById('lletra').value = '·';" 
+                            style="color:blue" title="Punt Volat">·</button>
+                    <button id="guio" onclick="document.getElementById('lletra').value = '-';" 
+                            style="color:blue" title="Guionet">-</button>
+                    <!--
+                    <button id="greu" onclick="alert('Sense vocals accentuades!');" 
+                            style="color:red" title="Accent Greu">`</button>
+                    -->
+                  </td>          
+                </tr>
+            </strong></table>
+        </div>
+
     </body>
 </html>
+

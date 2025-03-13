@@ -114,9 +114,9 @@
                 document.getElementById("moix").hidden = true;
                 document.body.style.backgroundImage = "url('img/Jungle.png')";
                 document.getElementById("cat").play();
-                document.getElementById("bell").play();
                 document.getElementById("rotar").hidden = false;
                 window.alert("que en pau descansi R.I.P.");
+                document.getElementById("bell").play();
                 aturaTot();
             }
             //si has aconseguit introduir totes les lletres has guanyat
@@ -157,7 +157,7 @@
             document.getElementById("rotar").hidden = true;
             document.getElementById("moix").hidden = true;
             //Demana a l'usuari a quina pantalla vol jugar
-            if (!confirm('Anam a la quinta forca?'))
+            if (!confirm('Anam a la quinta forca?/Vamos a la quinta forca?/Wanna go to the fifth gallow?'))
                 document.body.style.backgroundImage = "url('img/fondo1.png')";
             document.getElementById("mystery").play();
         }
