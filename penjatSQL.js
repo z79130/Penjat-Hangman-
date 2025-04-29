@@ -280,6 +280,37 @@
                     "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
         }
         
+    // Funció per carregar la base de dades penjat.db
+    function AlaWeb_SQLite(IdIdioma) {
+        //window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
+        config = {
+            locateFile: filename => `/dist/${filename}`
+        };
+        // Recuperam de la base de dades els TextosGUI per tots els Idiomes
+        alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
+                SELECT * FROM TblTextosGUI;',
+            [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
+        //    [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+        );
+        window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
+    }
+
+    // Print data  
+    function Print_Data(res) {
+        window.alert("Print_Data");        
+        for (var i in res)
+        {
+           // console.log("row " + i);
+           // document.getElementById("res").innerHTML += "<br>";
+           for (var j in res[i])
+             {
+              // console.log(" " + res[i][j]);
+              // document.getElementById("res").innerHTML += res[i][j] + ", ";
+              window.alert("res[" + i + "][" +j + "] = " + res[i][j]);
+             }
+        }
+    }
+    
         //S'empra quan guanyes o perds per aturar el programa
         function aturaTot() {
             document.getElementById("Comprovar").disabled = true;
@@ -349,4 +380,8 @@
             
             document.getElementById("paraula").innerHTML = Paraula;
             document.body.style.display = "block";
+        }
+        
+        function cacatua(){
+            AlaWeb_SQLite("ca");
         }
