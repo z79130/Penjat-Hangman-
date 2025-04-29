@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html> 
+    <head>
+        <title>jocdelpenjat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/penjatAlfa.js" type="text/javascript"></script>
+        <link href="css/penjatAlfa.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body onload = "cargar();" style =" background-image: url('img/Desert.png');
+          background-size: 640px 480px; background-repeat: no-repeat;">
+        <h1 translate="no">Joc del Penjat versió alfa</h1>
+        <input type="text" id="lletra" name="esbrina la lletra" maxlength="1"
+               placeholder="Escriu una lletra">
+        <button id="Comprovar" type="button" onclick="comprovar()">Comprovar</button>
+        
+        <h2>Paraula</h2>
+        <p id="Paraula">_ _ _ _ _</p>
+        
+        <h2>Vides</h2>
+        <p id="Vides">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
+        
+        <h2>Lletres fallades</h2>
+        <p id="errada">_ _ _ _ _ </p>
+        <h4 id = "counter" >0</h4>
+        
+        <div id="banderes">
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img id="es" src="img/es.png" alt="españish"/></a>
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp"><img id="fr" src="img/fr.png" alt=""/></a>
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=gb&_x_tr_hl=gb&_x_tr_pto=wapp"><img id="gb" src="img/gb.png" alt=""/></a>
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=wapp"><img id="it" src="img/it.png" alt=""/></a>
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=ca&_x_tr_hl=ca&_x_tr_pto=wapp"><img id="ca" src="img/ca.png" alt=""/></a>
+            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20alfa.html?_x_tr_sl=auto&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp"><img id="de" src="img/de.png" alt=""/></a>
+        </div>
+       
+        <br><br>
+        <div id="imatges">
+        <img id="ahorcado_0" src="img/ahorcado_0.png" alt="ahorcado0" style="height: 280px; width: 270px"/>
+        <img id="ahorcado_1" src="img/ahorcado_1.png" alt="ahorcado1" style="height: 280px; width: 270px"/>
+        <img id="ahorcado_2" src="img/ahorcado_2.png" alt="ahorcado2" style="height: 280px; width: 270px"/>
+        <img id="ahorcado_3" src="img/ahorcado_3.png" alt="ahorcado3" style="height: 280px; width: 270px"/>
+        <img id="ahorcado_4" src="img/ahorcado_4.png" alt="ahorcado4" style="height: 280px; width: 270px"/>
+        <img id="ahorcado_5" src="img/ahorcado_5.png" alt="ahorcado5" style="height: 280px; width: 270px"/>
+        <img id="ahorcado_6" src="img/ahorcado_6.png" alt="ahorcado6" style="height: 280px; width: 270px"/>
+        </div>
+        
+        <a href="img/ahorcado.jpg">
+        <img id="ahorcado" src="img/ahorcado.jpg" alt="" style="width:234px;height:270px;"></a>
+        <img id="caminar" src="img/caminar.gif" alt="" style="width:86px; height:90px"/>
+        <img id="rotar" src="img/rotar.gif" alt="" style="width:86px; height:90px"/>
+        <img id="moix" src="img/disfraz3.png" alt="" style="width:86px; height:90px"/>
+        <br><br>
+        
+        <div id="audio">
+            <audio id="mystery">
+                <source src="aud/mystery.mp3" type="audio/mpeg">  
+            </audio>
+            
+            <audio id="miau">
+                <source src="aud/miau.mp3" type="audio/mpeg">
+            </audio>
+            
+            <audio id="clock">
+                <source src="aud/clock_ticking.mp3" type="audio/mpeg">
+            </audio>
+            
+            <audio id="cheer">
+                <source src="aud/cheer.mp3" type="audio/mpeg">
+            </audio>
+            
+            <audio id="cat">
+                <source src="aud/cat-fight.mp3" type="audio/mpeg">              
+            </audio>
+            
+            <audio id="boom">
+                <source src="aud/boom_cloud.mp3" type="audio/mpeg">               
+            </audio>
+            
+            <audio id="bell">
+                <source src="aud/bell_toll_x3.mp3" type="audio/mpeg">                
+            </audio>
+            
+            <audio id="bell2">
+                <source src="aud/bell_toll.mp3" type="audio/mpeg">               
+            </audio>
+        </div>
+        
+            
+            
+            
+            
+            
+        <h4>
+           Crèdits: <a href="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/">El Joc del Penjat on Scratch</a>
+        </h4>
+    </body>
+</html>

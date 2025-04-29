@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            //a continuació estan les funcions per a definir cada funcio per a cada imatge
+            function carregar() {
+                document.getElementById("ahorcado_0").hidden=true;
+                window.alert("La pagina ha carregat");
+            }
+            function ahorcado5(){
+                document.getElementById("ahorcado_5");
+                window.alert("Has passat per amunt");
+            }
+            function ahorcado3(){
+                document.getElementById("ahorcado_3");
+                window.alert("Has clicat");
+            }
+            function ahorcado2(){
+                document.getElementById("ahorcado_2");
+                window.alert("Has clicat dues vegades");
+            }
+            function ahorcado1(){
+                document.getElementById("ahorcado_1");
+                window.alert("Has arrossegat");
+            }
+            function ahorcado6(){
+                document.getElementById("ahorcado_3");
+                window.alert("Has clicat");
+            }
+            
+        </script>
+    </head>
+    <body onload="carregar()">
+        <div>El millor joc del món</div>
+        <!--distribució de les imatges i asignació de les funcions-->
+        <img id="ahorcado_0" src="img/ahorcado_0.png" alt="ahorcado0" style="height: 300px; width: 295px"/>
+        <img id="ahorcado_1" src="img/ahorcado_1.png" alt="ahorcado1" style="height: 300px; width: 295px" onmouseover="ahorcado5();"/>
+        <img id="ahorcado_2" src="img/ahorcado_2.png" alt="ahorcado2" style="height: 300px; width: 295px" onclick="ahorcado3();"/>
+        <img id="ahorcado_3" src="img/ahorcado_3.png" alt="ahorcado3" style="height: 300px; width: 295px" ondblclick="ahorcado2();"/>
+        <img id="ahorcado_4" src="img/ahorcado_4.png" alt="ahorcado4" style="height: 300px; width: 295px" ondrag="ahorcado1();"/>
+        <img id="ahorcado_5" src="img/ahorcado_5.png" alt="ahorcado5" style="height: 300px; width: 295px"/>
+        <img id="ahorcado_6" src="img/ahorcado_6.png" alt="ahorcado6" style="height: 300px; width: 295px" onclick="ahorcado6();"/>
+    </body>
+</html>
