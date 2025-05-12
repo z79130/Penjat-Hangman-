@@ -4,7 +4,7 @@
  */
 
 // Diferents idiomes per la GUI
-    const Idiomes = [
+    const Idiomes_dft = [
         {
             "IdIdioma": "ca",
             "Titol": "Versió amb Estructures de Dades Joc del Penjat",
@@ -142,6 +142,7 @@
             "Puntuacio": "Score:"
         }
     ];
+    var Idiomes = Idiomes_dft;
     var Idioma = Idiomes.find(Idioma => Idioma.IdIdioma === "ca");
     
         //Paraules i dites
@@ -381,7 +382,26 @@
             document.getElementById("paraula").innerHTML = Paraula;
             document.body.style.display = "block";
         }
-        
-        function cacatua(){
-            AlaWeb_SQLite("ca");
-        }
+        // Canviam els diferents literals de la GUI segons l'idioma
+    function CanviarIdioma(IdIdioma) {
+
+        AlaWeb_SQLite(IdIdioma);
+        Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
+       
+        document.title = Idioma.Titol;
+        document.getElementById("Versio").innerHTML = Idioma.Versio;
+        document.getElementById("lletra").placeholder = Idioma.Input;
+        document.getElementById("comprovar").innerHTML = Idioma.Comprovar;
+        document.getElementById("Paraula").innerHTML = Idioma.Paraula;
+        document.getElementById("Sopes").innerHTML = Idioma.Sopes;
+        document.getElementById("pista").innerHTML = Idioma.Pista;        
+        document.getElementById("Vides").innerHTML = Idioma.Vides;
+        document.getElementById("Moix").innerHTML = Idioma.Moix;
+        document.getElementById("Lletres").innerHTML = Idioma.Lletres;
+       
+
+        // Escull una nova paraula aleatòriament
+        window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
+        // window.alert("[" + paraula + "]=[" + pista + "]");
+    }
+     

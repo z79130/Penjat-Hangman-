@@ -5,7 +5,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
 -->
 <html> 
     <head>
-        <title>jocdelpenjat</title>
+        <title id="Títol">versioSQL</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/penjatBeta.css" rel="stylesheet" type="text/css"/>
@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
     </head>
     <body onload = "cargar();" style =" background-image: url('img/Desert.png');
           background-size: 640px 480px; background-repeat: no-repeat;">
-        <h1 translate="no">Joc del Penjat versió beta</h1>
+        <h1 id="Versio" translate="no">Joc del Penjat versió beta</h1>
         <input type="text" id="lletra" name="esbrina la lletra" maxlength="1"
                placeholder="Escriu una lletra">
         <button id="Comprovar" type="button" onclick="comprovar()">Comprovar</button>
@@ -45,12 +45,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <h4 id = "counter" >0</h4>
         
         <div id="banderes">
-            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20beta.html?_x_tr_sl=auto&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=wapp"><img id="es" src="img/es.png" alt=""/></a>
-            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20beta.html?_x_tr_sl=auto&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=wapp"><img id="fr" src="img/fr.png" alt=""/></a>
-            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20beta.html?_x_tr_sl=auto&_x_tr_tl=gb&_x_tr_hl=gb&_x_tr_pto=wapp"><img id="gb" src="img/gb.png" alt=""/></a>
-            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20beta.html?_x_tr_sl=auto&_x_tr_tl=it&_x_tr_hl=it&_x_tr_pto=wapp"><img id="it" src="img/it.png" alt=""/></a>
-            <img id="ca" src="img/ca.png" alt="" onclick="cacatua()"/>
-            <a href="https://magical--basbousa--24ab41-netlify-app.translate.goog/versi%C3%B3%20beta.html?_x_tr_sl=auto&_x_tr_tl=de&_x_tr_hl=de&_x_tr_pto=wapp"><img id="de" src="img/de.png" alt=""/></a>
+            <img id="es" src="img/es.png" alt="" onclick="CanviarIdioma('es');"/>
+            <img id="fr" src="img/fr.png" alt="" onclick="CanviarIdioma('fr');"/>
+            <img id="en" src="img/gb.png" alt="" onclick="CanviarIdioma('en');"/> 
+            <img id="it" src="img/it.png" alt="" onclick="CanviarIdioma('it');"/>
+            <img id="ca" src="img/ca.png" alt="" onclick="CanviarIdioma('ca');"/>
+            <img id="de" src="img/de.png" alt="" onclick="CanviarIdioma('de');"/>
             <button id="TECLAT" type="button" onclick="document.getElementById('Teclat').hidden =
                     !document.getElementById('Teclat').hidden;" title="Mostra o Amaga"> 
             <img src="img/keyboard.png" alt="teclat"> </button>
