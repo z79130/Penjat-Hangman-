@@ -170,7 +170,6 @@
         //funció per mostrar una pista al jugador
         function ajuda(){
             window.alert(pista);
-            window.alert(paraula);
         }
 
         //contador
@@ -290,10 +289,10 @@
         // Recuperam de la base de dades els TextosGUI per tots els Idiomes
         alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                 SELECT * FROM TblTextosGUI;',
-            [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
-        //    [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+            //[], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
+            [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
-        window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
+        //window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
     }
 
     // Print data  
@@ -391,15 +390,14 @@
         document.title = Idioma.Titol;
         document.getElementById("Versio").innerHTML = Idioma.Versio;
         document.getElementById("lletra").placeholder = Idioma.Input;
-        document.getElementById("comprovar").innerHTML = Idioma.Comprovar;
+        document.getElementById("Comprovar").innerHTML = Idioma.Comprovar;
         document.getElementById("Paraula").innerHTML = Idioma.Paraula;
-        document.getElementById("Sopes").innerHTML = Idioma.Sopes;
-        document.getElementById("pista").innerHTML = Idioma.Pista;        
+        document.getElementById("Sopes").innerHTML = Idioma.Sopes;        
         document.getElementById("Vides").innerHTML = Idioma.Vides;
+        document.getElementById("errada").innerHTML = Idioma.Lletres;
+        document.getElementById("pista").innerHTML = Idioma.Pista;
         document.getElementById("Moix").innerHTML = Idioma.Moix;
-        document.getElementById("Lletres").innerHTML = Idioma.Lletres;
-       
-
+        
         // Escull una nova paraula aleatòriament
         window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
         // window.alert("[" + paraula + "]=[" + pista + "]");
