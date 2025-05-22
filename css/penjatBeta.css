@@ -1,0 +1,64 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+body {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+#imatges { position:relative; top: -460px; left: 318px; }
+
+#banderes { position: relative; top: -420px; left: 350px; }
+
+#ahorcado { position: relative; top: -400px; left: 200px; }
+
+#caminar { position: relative; top: -370px; left: 300px; }
+
+#rotar { position: relative; top: -700px; left: 460px; }
+
+#moix { position: relative; top: -570px; left: 310px; }
+
+#counter { position: relative; top: -205px; left: 150px }
+
+#Teclat { position: absolute; top: 260px; left: 320px }
+
+html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    body {
+        background:linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border:1px solid black;
+        padding:10px 20px;
+        box-shadow:5px 0px 30px #000;
+        border-radius:8px;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    h1, a {
+        background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border: 1px solid black;
+        padding: 1px 1px;
+        box-shadow: 5px 0px 30x #000;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    h2 {
+        color: white;
+    }
+    
+    
+
+
+
+
+
+
+
