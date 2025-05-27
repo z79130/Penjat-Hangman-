@@ -394,7 +394,7 @@
         document.getElementById("Versio").innerHTML = Idioma.Versio;
         document.getElementById("lletra").placeholder = Idioma.Input;
         document.getElementById("Comprovar").innerHTML = Idioma.Comprovar;
-        document.getElementById("Paraula").innerHTML = Idioma.Paraula;
+        document.getElementById("paraula").innerHTML = Idioma.Paraula;
         document.getElementById("Sopes").innerHTML = Idioma.Sopes;        
         document.getElementById("Vides").innerHTML = Idioma.Vides;
         document.getElementById("Errada").innerHTML = Idioma.Lletres;
