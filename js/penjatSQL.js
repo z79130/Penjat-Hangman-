@@ -276,7 +276,7 @@
                 amagaImatges();
             }
             //espai per a les vides
-            document.getElementById("Vides").innerHTML =
+            document.getElementById("vides").innerHTML =
                     "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Vides;
         }
         
@@ -293,6 +293,9 @@
             [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
         //window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
+        //alasql('ATTACH SQLITE DATABASE("db/penjat.db");USE penjat; \n\
+                //SELECT Paraula, Pista \n\
+               // FROM TblP
     }
 
     // Print data  
@@ -394,7 +397,7 @@
         document.getElementById("Paraula").innerHTML = Idioma.Paraula;
         document.getElementById("Sopes").innerHTML = Idioma.Sopes;        
         document.getElementById("Vides").innerHTML = Idioma.Vides;
-        document.getElementById("errada").innerHTML = Idioma.Lletres;
+        document.getElementById("Errada").innerHTML = Idioma.Lletres;
         document.getElementById("pista").innerHTML = Idioma.Pista;
         document.getElementById("Moix").innerHTML = Idioma.Moix;
         
